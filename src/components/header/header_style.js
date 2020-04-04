@@ -41,7 +41,7 @@ export const NavItem = styled.a`
     font-size: 17px;
     padding: 0 15px;
     color: #969696;
-
+    /* & 表示同级的意思 */
     &.active {
         color: #ea6f5a;
     }
@@ -70,20 +70,6 @@ export const NavSearch = styled.div`
             color: #fff;
         }
     }
-    /* 为动画挂载入场样式：ease-out为滑动效果 */
-    .slide-enter {
-        transition: All .2s ease-out
-    }
-    .slide-enter-active {
-        width: 220px
-    }
-    /* 为动画卸载出场样式 */
-    .slide-exit {
-        transition: All .2s ease-out
-    }
-    .slide-exit-active {
-        width: 160px
-    }
 `;
 
 export const SearchWrapper = styled.input.attrs({
@@ -106,6 +92,20 @@ export const SearchWrapper = styled.input.attrs({
     }
     &.focused {
         width:220px;
+    }
+    /* 为动画挂载入场样式：ease-out为滑动效果 */
+    &.slide-enter {
+        transition: All .2s ease-out
+    }
+    &.slide-enter-active {
+        width: 220px
+    }
+    /* 为动画卸载出场样式 */
+    &.slide-exit {
+        transition: All .2s ease-out
+    }
+    &.slide-exit-active {
+        width: 160px
     }
 `;
 
