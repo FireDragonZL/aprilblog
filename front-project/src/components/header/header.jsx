@@ -12,27 +12,23 @@ import { HeaderBody,
         HeaderAddition,
         Button,
        } from './header_style'
-
+import {headInputBlur, headInputFocus} from '../../redux/actions'
 export default class Header extends Component {
-    // 存储input搜索框是否发生获取/失去焦点事件，从而控制事件前后的样式
-    state = {
-        focused: false
-    }
+    
     // 绑定获取焦点事件
     handleInputFocus = () => {
-        this.setState({
-            focused: true
-        })
+        // 调用store中的更新方法（发布）
+        this.props.store.dispatch(headInputFocus());
     }
     // 绑定失去焦点函数
     handleInputBlur = () => {
-        this.setState({
-            focused: false
-        })
+        this.props.store.dispatch(headInputBlur());
     }
     // 渲染
     render(){
-        const {focused} = this.state
+        const {focused} = this.props.store.getState()
+        console.log("当前的focused状态为=", focused)
+        console.log("Header组件渲染...")
         return(
             <HeaderBody>
                 <HeaderWrapper>
