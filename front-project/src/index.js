@@ -6,8 +6,6 @@ import './index_style.js'
 import './static/iconfound/iconfont.js'
 
 render(
-    <App />, 
+    <App />,
     document.getElementById('root')
 )
-
-    
