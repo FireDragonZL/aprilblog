@@ -34,6 +34,16 @@ const defaultState = fromJS({
             desc: "有人说：“不必把太多人请进生命里，若他们走进不了你的内心，就只会把你的生命搅扰得拥挤不堪。” 朋友不必多，贵在能知心。珍贵的情谊，要留给最值得结...",
             imgURI: "https://upload-images.jianshu.io/upload_images/11864358-a0a516a8e7bbaa45?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240"
         },
+    ],
+    recommendList: [
+        {
+            id: 1,
+            imgURI: "http://cdn2.jianshu.io/assets/web/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png"
+        },
+        {
+            id: 2,
+            imgURI: "http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+        }
     ]
 })
 

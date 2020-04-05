@@ -12,7 +12,7 @@ export const HomeLeft = styled.div`
 `;
 
 export const HomeRight = styled.div`
-    width: 290px;
+    width: 280px;
     float: right;
 `;
 
@@ -52,4 +52,18 @@ export const ArticleInfo = styled.div`
        font-size: 13px;
        color: #999;
    }
+`;
+
+export const RecommendWrapper = styled.div`
+    width: 280px;
+    padding: 10px 0;
+    border-bottom: 1px solid #dcdcdc;
+`;
+
+export const RecommendInfo = styled.div`
+    margin: 5px 0;
+    width: 280px;
+    height: 50px;
+    background: url(${(props) => (props.imgURI)});
+    background-size: contain;
 `;
