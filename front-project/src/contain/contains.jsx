@@ -7,6 +7,6 @@ import Header from '../components/header/header'
 import {headInputBlur, headInputFocus} from '../redux/actions'
 
 export default connect(
-    headInputState => ({ focused: headInputState }),
+    state => ({ focused: state }),
     { headInputBlur, headInputFocus }
 )(Header)
