@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import {Provider} from 'react-redux'
 import { BrowserRouter, Route} from 'react-router-dom'
 
-import Header from '../contain/contains'
+import Header from '../contain/headerContain'
 import { GlobalStyle } from '../index_style'
 import { GlobalIconStyle } from '../static/iconfound/iconfont'
 import store from '../redux/store'

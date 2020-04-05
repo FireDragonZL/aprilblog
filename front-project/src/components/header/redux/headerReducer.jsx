@@ -1,7 +1,7 @@
 /**
  * header组件的状态数据state
  */
-import { INPUTFOCUS, INPUTBLUR } from '../../../redux/action_types'
+import { INPUTFOCUS, INPUTBLUR } from './action_types'
 import {fromJS} from 'immutable'
 
 const defaultState = fromJS({

@@ -5,13 +5,13 @@ import {
     HomeLeft,
     HomeRight
 } from './home_style'
-import Topic from './component/topic/topic'
-import TopN from './component/topn/topn'
-import Recommend from './component/recommend/recommend'
-import Article from './component/articlelist/article'
+import TopN from './component/topn'
+import Recommend from './component/recommend'
+import Article from './component/article'
+import Topic from '../../contain/topicContain'
 
 /**
- * 主页的内容列表
+ * 主页的内容列表 布局
  */
 
 export default class Home extends Component {
@@ -19,7 +19,6 @@ export default class Home extends Component {
         return(
             <HomeWrapper>
                 <HomeLeft>
-                    
                     <Topic />
                     <Article />
                 </HomeLeft>

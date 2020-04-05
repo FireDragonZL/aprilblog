@@ -4,8 +4,10 @@
  */
 import {combineReducers} from 'redux'
 
-import {headInputState} from '../components/header/reducer/headerReducer'
+import {headInputState} from '../components/header/redux/headerReducer'
+import { topicState} from '../components/home/redux/topicReducer'
 
 export const reducer = combineReducers({
-    header: headInputState
+    header: headInputState,
+    topic: topicState
 })
