@@ -31,8 +31,8 @@ export default class Header extends Component {
     }
     // 渲染
     render(){
-        const {focused} = this.props.focused
-        console.log("当前的focused状态为=", focused)
+        const { focused } = this.props.focused.header
+        console.log("当前的focused对象为=", this.props.focused)
         console.log("Header组件渲染...")
         return(
             <HeaderBody>
