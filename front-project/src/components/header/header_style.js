@@ -35,7 +35,9 @@ export const Nav = styled.div`
     justify-content: space-around;
 `;
 
-export const NavItem = styled.a`
+export const NavItem = styled.a.attrs({
+    href: "#"
+})`
     height: 56px;
     line-height: 56px;
     font-size: 17px;

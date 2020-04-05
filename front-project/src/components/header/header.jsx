@@ -31,6 +31,7 @@ export default class Header extends Component {
     }
     // 渲染
     render(){
+        // 从map对象中获取focused对应的值
         const focused = this.props.focused.header.get("focused")
         console.log("当前的focused对象为=", this.props.focused.header)
         console.log("Header组件渲染...")
