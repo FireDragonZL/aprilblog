@@ -7,7 +7,7 @@ import {
 } from './home_style'
 import TopN from './component/topn'
 import Recommend from './component/recommend'
-import Article from './component/article'
+import Article from '../../contain/articleContain'
 import Topic from '../../contain/topicContain'
 
 /**

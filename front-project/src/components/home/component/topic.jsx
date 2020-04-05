@@ -17,7 +17,7 @@ export default class Topic extends Component {
     }
 
     render() {
-        const topicList = this.props.topicItem.topic.get("topicList")
+        const topicList = this.props.topicItem.home.get("topicList")
         console.log("当前topic对象为=", topicList)
         return (
             <TopicWrapper>
