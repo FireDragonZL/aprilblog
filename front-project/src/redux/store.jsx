@@ -1,7 +1,7 @@
 import { createStore } from 'redux'
 
-import {headInputState} from './reducers'
+import {reducer} from './reducers'
 
-const store = createStore(headInputState)
+const store = createStore(reducer)
 
 export default store
