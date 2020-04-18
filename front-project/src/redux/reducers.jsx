@@ -5,7 +5,7 @@
 import {combineReducers} from 'redux'
 
 import {headInputState} from '../components/header/redux/headerReducer'
-import { homeState} from '../components/home/redux/homeReducer'
+import { homeState } from '../components/home/redux/homeReducer'
 
 export const reducer = combineReducers({
     header: headInputState,

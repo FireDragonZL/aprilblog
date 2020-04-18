@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { TopNWrapper } from '../home_style'
+
 /**
  * topN 列表组件
  */
@@ -7,7 +9,7 @@ import React, { Component } from 'react'
 export default class TopN extends Component {
     render() {
         return (
-            <div>TopN</div>
+            <TopNWrapper>TopN</TopNWrapper>
         )
     }
 }

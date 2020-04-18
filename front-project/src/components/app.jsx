@@ -6,7 +6,7 @@ import Header from '../contain/headerContain'
 import { GlobalStyle } from '../index_style'
 import { GlobalIconStyle } from '../static/iconfound/iconfont'
 import store from '../redux/store'
-import Home from './home/home'
+import Home from '../contain/homeContain'
 import Write from './write/write'
 
 export default class App extends Component {

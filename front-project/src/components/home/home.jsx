@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import PropTypes from 'prop-types'
 
 import {
     HomeWrapper,
@@ -15,6 +16,15 @@ import Topic from '../../contain/topicContain'
  */
 
 export default class Home extends Component {
+    static propTypes = {
+        changeHomeDate: PropTypes.func.isRequired
+    }
+
+    // 初始化状态挂载
+    componentDidMount(){
+        this.props.changeHomeDate()
+    }
+
     render(){
         return(
             <HomeWrapper>

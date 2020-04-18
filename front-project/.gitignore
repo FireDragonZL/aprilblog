@@ -5,9 +5,11 @@
 /.pnp
 .pnp.js
 package-lock.json
+/api
 
 # testing
 /coverage
+/public/api
 
 # production
 /build

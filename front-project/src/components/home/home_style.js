@@ -67,3 +67,10 @@ export const RecommendInfo = styled.div`
     background: url(${(props) => (props.imgURI)});
     background-size: contain;
 `;
+
+export const TopNWrapper = styled.div`
+    margin: 10px 0;
+    width: 280px;
+    height: 400px;
+    border: 1px solid darkgrey;
+`;
