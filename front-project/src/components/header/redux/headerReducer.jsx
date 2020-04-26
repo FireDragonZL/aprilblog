@@ -10,7 +10,7 @@ const defaultState = fromJS({
 
 export const headInputState = (state = defaultState, action) => {
 
-    console.log("headInputState()=", state, action)
+    //console.log("headInputState()=", state, action)
 
     switch (action.type) {
         case INPUTFOCUS:

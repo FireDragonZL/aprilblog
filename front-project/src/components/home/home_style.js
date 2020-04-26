@@ -74,3 +74,27 @@ export const TopNWrapper = styled.div`
     height: 400px;
     border: 1px solid darkgrey;
 `;
+
+export const MoreList = styled.div`
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 600px;
+    border-radius: 20px;
+    background: #a5a5a5;
+    margin: 15px auto;
+    color: white;
+    cursor: pointer;
+`;
+
+export const BackTop = styled.div`
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 1px darkgrey solid;
+    right: 80px;
+    bottom: 80px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+`;

@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
 
 import Home from '../components/home/home'
-import { changeHomeDate } from '../components/home/redux/actions'
+import { changeHomeDate, changeShowScroll } from '../components/home/redux/actions'
 
 export default connect(
-    null,
-    { changeHomeDate }
+    state => ({showScroll: state}),
+    { changeHomeDate, changeShowScroll }
 )(Home)

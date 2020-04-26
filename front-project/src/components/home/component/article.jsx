@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 
 import { 
     ArticleList,
-    ArticleInfo
+    ArticleInfo,
+    MoreList
 } from '../home_style'
 
 /**
@@ -13,18 +14,23 @@ import {
 export default class Article extends Component {
 
     static propTypes = {
-        articleItem: PropTypes.object.isRequired
+        articleItem: PropTypes.object.isRequired,
+        getMoreList: PropTypes.func.isRequired
     }
 
     render() {
+        // 文章列表内容
         const list = this.props.articleItem.home.get("articleList")
-        console.log("当前的article对象为=", list)
+        // 当前的分页页码
+        const articlePage = this.props.articleItem.home.get("articlePage")
+        // 获取更多内容的方法
+        const {getMoreList} = this.props
         return (
             <div>
                 {
                     list.map((item) => {
                         return(
-                            <ArticleList key={item.get("id")}>
+                            <ArticleList key={item.get('id')}>
                                 <img className="pic" src={item.get("imgURI")} />
                                 <ArticleInfo >
                                     <h3 className="title">{item.get("title")}</h3>
@@ -34,6 +40,7 @@ export default class Article extends Component {
                         )
                     })
                 }
+                <MoreList onClick={() => getMoreList(articlePage)}>阅读更多</MoreList>
             </div>
         )
     }

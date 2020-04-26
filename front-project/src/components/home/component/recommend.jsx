@@ -18,7 +18,7 @@ export default class Recommend extends Component {
 
     render() {
         const list = this.props.recommendItem.home.get("recommendList")
-        console.log("当前的recommend对象=", list)
+        // console.log("当前的recommend对象=", list)
         return (
             <RecommendWrapper>
                 {

@@ -12,7 +12,7 @@ import Write from './write/write'
 export default class App extends Component {
 
     render(){
-        console.log("APP组件渲染...")
+        //console.log("APP组件渲染...")
         return (
             <div>
                 <GlobalStyle />

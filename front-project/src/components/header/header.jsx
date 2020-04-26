@@ -20,21 +20,12 @@ export default class Header extends Component {
         headInputBlur: PropTypes.func.isRequired,
         headInputFocus: PropTypes.func.isRequired
     }
-    // 绑定获取焦点事件
-    handleInputFocus = () => {
-        // 调用store中的更新方法（发布）
-        this.props.headInputFocus();
-    }
-    // 绑定失去焦点函数
-    handleInputBlur = () => {
-        this.props.headInputBlur();
-    }
+    
     // 渲染
     render(){
         // 从map对象中获取focused对应的值
         const focused = this.props.focused.header.get("focused")
-        console.log("当前的focused对象为=", this.props.focused.header)
-        console.log("Header组件渲染...")
+        const { headInputBlur, headInputFocus } = this.props
         return(
             <HeaderBody>
                 <HeaderWrapper>
@@ -49,8 +40,8 @@ export default class Header extends Component {
                                 classNames='slide'
                             >
                                 <SearchWrapper className={focused ? "focused" : ""}
-                                    onFocus={this.handleInputFocus}
-                                    onBlur={this.handleInputBlur}
+                                    onFocus={headInputFocus}
+                                    onBlur={headInputBlur}
                                 />
                             </CSSTransition>
                             <i className={focused ? "focused iconfont" : "iconfont"}>&#xe62d;</i>
