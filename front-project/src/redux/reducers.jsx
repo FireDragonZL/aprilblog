@@ -5,9 +5,11 @@
 import {combineReducers} from 'redux'
 
 import {headInputState} from '../components/header/redux/headerReducer'
-import { homeState } from '../components/home/redux/homeReducer'
+import {homeState} from '../components/home/redux/homeReducer'
+import {detailState} from '../components/detail/redux/detailReducer'
 
 export const reducer = combineReducers({
     header: headInputState,
-    home: homeState
+    home: homeState,
+    detail: detailState
 })

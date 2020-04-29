@@ -13,6 +13,7 @@ import { HeaderBody,
         HeaderAddition,
         Button,
        } from './header_style'
+import { Link } from 'react-router-dom'
 export default class Header extends Component {
     // 将状态值和状态更改类型作为属性值传进来
     static propTypes = {
@@ -29,9 +30,13 @@ export default class Header extends Component {
         return(
             <HeaderBody>
                 <HeaderWrapper>
-                    <HeaderLogo />
+                    <Link to="/">
+                        <HeaderLogo />
+                    </Link>
                     <Nav>
-                        <NavItem className="active">首页</NavItem>
+                        <Link to="/">
+                            <NavItem className="active">首页</NavItem>
+                        </Link>
                         <NavItem className="download">下载APP</NavItem>
                         <NavSearch>
                             <CSSTransition

@@ -6,6 +6,7 @@ import {
     ArticleInfo,
     MoreList
 } from '../home_style'
+import { Link } from 'react-router-dom'
 
 /**
  * 文章列表组件
@@ -30,13 +31,15 @@ export default class Article extends Component {
                 {
                     list.map((item) => {
                         return(
-                            <ArticleList key={item.get('id')}>
-                                <img className="pic" src={item.get("imgURI")} />
-                                <ArticleInfo >
-                                    <h3 className="title">{item.get("title")}</h3>
-                                    <p className="desc">{item.get("desc")}</p>
-                                </ArticleInfo>
-                            </ArticleList>
+                            <Link key={item.get('id')} to={'/detail/' + item.get('id')}>
+                                <ArticleList>
+                                    <img className="pic" src={item.get("imgURI")} />
+                                    <ArticleInfo >
+                                        <h3 className="title">{item.get("title")}</h3>
+                                        <p className="desc">{item.get("desc")}</p>
+                                    </ArticleInfo>
+                                </ArticleList>
+                            </Link>
                         )
                     })
                 }

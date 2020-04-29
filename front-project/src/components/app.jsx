@@ -7,7 +7,8 @@ import { GlobalStyle } from '../index_style'
 import { GlobalIconStyle } from '../static/iconfound/iconfont'
 import store from '../redux/store'
 import Home from '../contain/homeContain'
-import Write from './write/write'
+import Detail from '../contain/detailContain'
+import Login from './login/Login'
 
 export default class App extends Component {
 
@@ -18,14 +19,14 @@ export default class App extends Component {
                 <GlobalStyle />
                 <GlobalIconStyle />
                 <Provider store={store}>
-                    <Header />
                     <BrowserRouter>
+                        <Header />
                         <Route path="/" exact component={Home} />
-                        <Route path="/write" exact component={Write} />
+                        <Route path="/detail/:id" exact component={Detail} />
+                        <Route path="/login" exact component={Login} />
                     </BrowserRouter>
                 </Provider>
             </div>
         )
     }
-    
 }

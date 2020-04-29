@@ -1,11 +1,14 @@
-import { createStore,applyMiddleware } from 'redux'
+import { createStore,applyMiddleware,compose } from 'redux'
 import thunk from 'redux-thunk'
 
 import {reducer} from './reducers'
 
+// redux-devtools插件是否存在，否则返回compose函数
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+
 const store = createStore(
     reducer,
-    applyMiddleware(thunk)
+    composeEnhancers(applyMiddleware(thunk))
 )
 
 /**

@@ -16,9 +16,7 @@ export const HeaderWrapper = styled.div`
     justify-content: space-around;
 `;
 
-export const HeaderLogo = styled.a.attrs({
-    href: "#"
-})`
+export const HeaderLogo = styled.div`
     float: left;
     height: 56px;
     width: 100px;
@@ -35,9 +33,7 @@ export const Nav = styled.div`
     justify-content: space-around;
 `;
 
-export const NavItem = styled.a.attrs({
-    href: "#"
-})`
+export const NavItem = styled.div`
     height: 56px;
     line-height: 56px;
     font-size: 17px;
