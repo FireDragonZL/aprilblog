@@ -5,8 +5,9 @@ import {connect} from 'react-redux'
 
 import Header from '../components/header/header'
 import {headInputBlur, headInputFocus} from '../components/header/redux/actions'
+import { logOut } from '../components/login/redux/actions'
 
 export default connect(
     state => ({ focused: state }),
-    { headInputBlur, headInputFocus }
+    { headInputBlur, headInputFocus, logOut }
 )(Header)

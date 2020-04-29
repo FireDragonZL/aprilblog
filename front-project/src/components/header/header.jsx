@@ -19,14 +19,18 @@ export default class Header extends Component {
     static propTypes = {
         focused: PropTypes.object.isRequired,
         headInputBlur: PropTypes.func.isRequired,
-        headInputFocus: PropTypes.func.isRequired
+        headInputFocus: PropTypes.func.isRequired,
+        logOut: PropTypes.func.isRequired
     }
     
     // 渲染
     render(){
         // 从map对象中获取focused对应的值
         const focused = this.props.focused.header.get("focused")
-        const { headInputBlur, headInputFocus } = this.props
+        const { headInputBlur, headInputFocus, logOut } = this.props
+        // 是否登录
+        const login = this.props.focused.login.get("loginOrNot")
+
         return(
             <HeaderBody>
                 <HeaderWrapper>
@@ -55,7 +59,13 @@ export default class Header extends Component {
                         <NavItem>
                             <i className="iconfont">&#xe636;</i>
                         </NavItem>
-                        <NavItem>登录</NavItem>
+                        {
+                            login ? <NavItem onClick={logOut}>退出</NavItem> : 
+                            <Link to="/login">
+                                <NavItem>登录</NavItem>
+                            </Link>
+                        }
+                        
                     </Nav>
                     <HeaderAddition>
                         <Button className="register">注册</Button>

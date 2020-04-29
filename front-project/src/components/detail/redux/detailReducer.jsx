@@ -9,8 +9,6 @@ const defaultState = fromJS({
 
 export const detailState = (state = defaultState, action) => {
 
-    console.log("文章详情==", action.data)
-
     switch (action.type) {
         case GETARTICLEDETAIL:
             return (

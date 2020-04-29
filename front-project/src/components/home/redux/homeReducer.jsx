@@ -12,9 +12,6 @@ const defaultState = fromJS({
 
 export const homeState = (state = defaultState, action) => {
 
-    console.log("当前 action_data =", action.data)
-    console.log("当前 state =", state.get("showScroll"))
-
     switch (action.type) {
         case CHANGEHOMEDATA:
             return(

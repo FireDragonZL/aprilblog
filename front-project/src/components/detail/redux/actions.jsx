@@ -9,7 +9,6 @@ export const getArticleDetail = (id) => {
         .then((res) => {
             return res.json()
         }).then((data) => {
-            console.log("异步获取数据==", data.data)
             dispatch(actionCreater(data.data))
         })
     }

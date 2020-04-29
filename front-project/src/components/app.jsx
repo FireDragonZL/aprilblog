@@ -8,12 +8,12 @@ import { GlobalIconStyle } from '../static/iconfound/iconfont'
 import store from '../redux/store'
 import Home from '../contain/homeContain'
 import Detail from '../contain/detailContain'
-import Login from './login/Login'
+import Login from '../contain/loginContain'
+import Write from './write/write'
 
 export default class App extends Component {
 
     render(){
-        //console.log("APP组件渲染...")
         return (
             <div>
                 <GlobalStyle />
@@ -24,6 +24,7 @@ export default class App extends Component {
                         <Route path="/" exact component={Home} />
                         <Route path="/detail/:id" exact component={Detail} />
                         <Route path="/login" exact component={Login} />
+                        <Route path="/write" exact component={Write} />
                     </BrowserRouter>
                 </Provider>
             </div>
