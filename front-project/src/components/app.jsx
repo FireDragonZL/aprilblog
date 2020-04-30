@@ -7,9 +7,9 @@ import { GlobalStyle } from '../index_style'
 import { GlobalIconStyle } from '../static/iconfound/iconfont'
 import store from '../redux/store'
 import Home from '../contain/homeContain'
-import Detail from '../contain/detailContain'
-import Login from '../contain/loginContain'
-import Write from './write/write'
+import Detail from '../components/detail/detail_loadable'
+import Login from '../components/login/login_loadable'
+import Write from '../contain/writeContain'
 
 export default class App extends Component {
 

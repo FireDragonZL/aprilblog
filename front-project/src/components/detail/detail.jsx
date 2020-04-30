@@ -21,6 +21,7 @@ export default class Detail extends Component{
     }
 
     render(){
+        console.log("文章详情页===", this.props)
         const title = this.props.detailState.detail.get("title")
         const content = this.props.detailState.detail.get("content")
         return(

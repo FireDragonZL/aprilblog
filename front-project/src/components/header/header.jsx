@@ -69,10 +69,12 @@ export default class Header extends Component {
                     </Nav>
                     <HeaderAddition>
                         <Button className="register">注册</Button>
-                        <Button className="writing">
-                            <i className="iconfont">&#xe6e5;</i>&nbsp;
-                            写文章
-                        </Button>
+                        <Link to="/write">
+                            <Button className="writing">
+                                <i className="iconfont">&#xe6e5;</i>&nbsp;
+                                写文章
+                            </Button>
+                        </Link>
                     </HeaderAddition>
                 </HeaderWrapper>
             </HeaderBody>
